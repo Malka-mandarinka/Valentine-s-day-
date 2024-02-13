@@ -13,18 +13,7 @@ let noCount = 0;
 
 yesButton.addEventListener("click", handleYesClick);
 
-noButton.addEventListener("click", function () {
-  if (play) {
-    noCount++;
-    const imageIndex = Math.min(noCount, MAX_IMAGES);
-    changeImage(imageIndex);
-    resizeYesButton();
-    updateNoButtonText();
-    if (noCount === MAX_IMAGES) {
-      play = false;
-    }
-  }
-});
+noButton.addEventListener("click", handleNoClick);
 
 function handleYesClick() {
   titleElement.innerHTML = "Yayyy!! :3";
