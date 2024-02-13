@@ -47,7 +47,7 @@ function handleNoClick() {
     }
 
     // Send email notification
-    sendEmailNotification('No');
+    sendEmailNotification('No', noCount);
   }
 }
 function resizeYesButton() {
