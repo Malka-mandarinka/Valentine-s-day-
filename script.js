@@ -21,7 +21,7 @@ function handleYesClick() {
   changeImage("yes");
 
   //send email notification
-sendEmailNotification ('Yes', noCount)
+sendEmailNotification ('Yes', 0)
 }
 
 function handleNoClick() {
