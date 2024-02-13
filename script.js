@@ -1,3 +1,4 @@
+//original file 
 "use strict";
 
 const titleElement = document.querySelector(".title");
@@ -13,14 +14,7 @@ let noCount = 0;
 
 yesButton.addEventListener("click", handleYesClick);
 
-noButton.addEventListener("click", handleNoClick);
-
-function handleYesClick() {
-  titleElement.innerHTML = "Yayyy!! :3";
-  buttonsContainer.classList.add("hidden");
-  changeImage("yes");}
-
-function handleNoClick() {
+noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
     const imageIndex = Math.min(noCount, MAX_IMAGES);
@@ -31,6 +25,12 @@ function handleNoClick() {
       play = false;
     }
   }
+});
+
+function handleYesClick() {
+  titleElement.innerHTML = "Yayyy!! :3";
+  buttonsContainer.classList.add("hidden");
+  changeImage("yes");
 }
 
 function resizeYesButton() {
