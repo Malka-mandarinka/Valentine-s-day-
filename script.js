@@ -21,26 +21,10 @@ function handleYesClick() {
   changeImage("yes");
 
   // Make an asynchronous request to Google Apps Script
-  fetch('https://script.google.com/macros/s/AKfycbzwZx6wa1e7FVHk4B1w1FkxtU4cz_bUHoY61yiVTqN6-G1bPsg_Xoo0noCtoAJSPPSWEg/exec')
+  fetch('https://script.google.com/macros/library/d/1EFGI40zA0KP4gRGngv7avxCVaAN1F4v-PV0-3Wz5bjB92tdS7LJpPWdm/1')
     .then(response => response.text())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
-}
-
-function handleNoClick() {
-  if (play) {
-    noCount++;
-    const imageIndex = Math.min(noCount, MAX_IMAGES);
-    changeImage(imageIndex);
-    resizeYesButton();
-    updateNoButtonText();
-    if (noCount === MAX_IMAGES) {
-      play = false;
-    }
-
-    // Send email notification
-    sendEmailNotification('No', noCount);
-  }
 }
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
