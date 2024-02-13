@@ -33,13 +33,6 @@ function handleNoClick() {
   }
 }
 
-// Make an asynchronous request to Google Apps Script
-  fetch('https://script.google.com/home/projects/1EFGI40zA0KP4gRGngv7avxCVaAN1F4v-PV0-3Wz5bjB92tdS7LJpPWdm/edit')
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-}
-
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
