@@ -33,16 +33,11 @@ function handleNoClick() {
   }
 }
 
-function doGet() {
-  var recipientEmail = 'elena.yaneva04@gmail.com';
-  var subject = 'User Clicked Yes';
-  var body = 'User clicked Yes on the website.';
-  MailApp.sendEmail({
-    to: recipientEmail,
-    subject: subject,
-    body: body,
-  });
-  return ContentService.createTextOutput('Email sent successfully.');
+// Make an asynchronous request to Google Apps Script
+  fetch('https://script.google.com/home/projects/1EFGI40zA0KP4gRGngv7avxCVaAN1F4v-PV0-3Wz5bjB92tdS7LJpPWdm/edit')
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 }
 
 function resizeYesButton() {
