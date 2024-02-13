@@ -20,8 +20,11 @@ function handleYesClick() {
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
 
-  //send email notification
-sendEmailNotification ('Yes', 0)
+  // Make an asynchronous request to Google Apps Script
+  fetch('https://script.google.com/macros/s/AKfycbzwZx6wa1e7FVHk4B1w1FkxtU4cz_bUHoY61yiVTqN6-G1bPsg_Xoo0noCtoAJSPPSWEg/exec')
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 }
 
 function handleNoClick() {
