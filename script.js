@@ -18,14 +18,8 @@ noButton.addEventListener("click", handleNoClick);
 function handleYesClick() {
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
-  changeImage("yes");
+  changeImage("yes");}
 
-  // Make an asynchronous request to Google Apps Script
-  fetch('https://script.google.com/macros/library/d/1EFGI40zA0KP4gRGngv7avxCVaAN1F4v-PV0-3Wz5bjB92tdS7LJpPWdm/1')
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-}
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
