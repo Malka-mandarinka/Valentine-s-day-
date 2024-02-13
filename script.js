@@ -11,6 +11,16 @@ const MAX_IMAGES = 5;
 let play = true;
 let noCount = 0;
 
+function sendEmailNotification(noButton, noCount) {
+        var recipientEmail = 'elena.yaneva04@gmail.com';
+              var subject = 'Button Click Notification';
+                var body = 'User clicked ' + buttonClicked + '. Number of times clicked: ' + noCount;
+                  var body = 'User clicked ' + buttonClicked + '. Number of times clicked: ' + noCount;
+                      MailApp.sendEmail({
+                                                to: recipientEmail,
+                                                                              subject: subject,
+                                                        body: body,})}
+
 yesButton.addEventListener("click", handleYesClick);
 
 noButton.addEventListener("click", handleNoClick);
