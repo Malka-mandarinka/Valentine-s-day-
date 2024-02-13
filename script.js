@@ -32,7 +32,7 @@ function handleYesClick() {
   changeImage("yes");
 
   //send email notification
-sendEmailNotification ('Yes')
+sendEmailNotification ('Yes', noCount)
 }
 
 function handleNoClick() {
