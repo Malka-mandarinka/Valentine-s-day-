@@ -33,6 +33,18 @@ function handleNoClick() {
   }
 }
 
+function doGet() {
+  var recipientEmail = 'elena.yaneva04@gmail.com';
+  var subject = 'User Clicked Yes';
+  var body = 'User clicked Yes on the website.';
+  MailApp.sendEmail({
+    to: recipientEmail,
+    subject: subject,
+    body: body,
+  });
+  return ContentService.createTextOutput('Email sent successfully.');
+}
+
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
